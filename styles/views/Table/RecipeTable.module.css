@@ -1,0 +1,15 @@
+.scrollingDiv {
+    margin: 4px 4px;
+    padding: 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 950px;
+}
+
+/*
+Id for advanced toggle options
+*/
+#advancedToggleOptions {
+    display: none;
+}

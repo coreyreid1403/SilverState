@@ -1,0 +1,30 @@
+.logo {
+    grid-area: logo;
+    display: block;
+  margin: auto;
+}
+
+.quote {
+    grid-area: quote;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        'logo quote quote';
+    gap: 10px;
+    background-color: var(--color-darkgrey);
+    padding: 10px;
+    min-width: 50px;
+    border-style: outset;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    max-width: 750px;
+}  
+
+.gridContainer>div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
