@@ -1,6 +1,5 @@
-import { Constants } from "../util/LumiMeals/Constants";
-
 import { customAlphabet } from 'nanoid'
+import Constants from '../util/Constants';
 
 /**
  * Definition of a user

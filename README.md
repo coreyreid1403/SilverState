@@ -76,4 +76,4 @@ ADDING NEW FUNDRAISER
 - Add new test product to Stripe
 - Add env var to vercel
 - Add test product to local env var
-- Update DonationConstants for team and offset
+- Update Constants for team and offset
