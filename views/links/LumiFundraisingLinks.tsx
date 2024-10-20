@@ -2,19 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import { MDBCollapse } from 'mdb-react-ui-kit';
 import PropTypes from 'prop-types';
 import { Router } from 'next/router';
-import FundraiserGlobalVariables from '../../util/LumiFundraising/FundraiserGlobalVariables';
 import { PhoneLinks, StyledHr } from '../../styles/SharedStyles';
 import LinkButton from './LinkButton';
-import Athlete from '../../models/LumiFundraising/Users/Athlete';
+import { BaseUser } from '../../models/BaseUser';
+import GlobalVariables from '../../util/GlobalVariables';
 
 /**
  * Links set up for Lumi Fundraising
  */
-function LumiFundraisingLinks(props: any) {
+function WineryLinks(props: any) {
   const [isCoach, setIsCoach] = useState(false);
   const [userFound, setUserFound] = useState(false);
-  const [athlete, setAthlete] = useState<Athlete | undefined>(undefined);
-  let globals = FundraiserGlobalVariables.getInstance();
+  const [user, setUser] = useState<BaseUser | undefined>(undefined);
+  let globals = GlobalVariables.getInstance();
   //if we have set up data or not
   const dataFetchedRef = useRef(false);
 
@@ -46,7 +46,7 @@ function LumiFundraisingLinks(props: any) {
             setIsCoach(true);
           } else {
             setIsCoach(false);
-            setAthlete(await globals?.getAthlete());
+            setUser(await globals?.getUser());
           }
         }
       });
@@ -70,12 +70,12 @@ function LumiFundraisingLinks(props: any) {
             Fundraisers
           </LinkButton>
           {/* //Only shows for Athletes */}
-          <LinkButton
-            url={`/LumiFundraising/athletes/${athlete?.fundraiserId}/${athlete?.userId}`}
+          {/* <LinkButton
+            url={`/LumiFundraising/athletes/${user?.fundraiserId}/${athlete?.userId}`}
             hidden={!userFound || isCoach}
           >
             Athletes
-          </LinkButton>
+          </LinkButton> */}
           <LinkButton url="/ContactUs">Contact Us</LinkButton>
         </>
       ) : (
@@ -103,14 +103,14 @@ function LumiFundraisingLinks(props: any) {
           </PhoneLinks>
           <StyledHr hidden={!userFound || !isCoach} />
           {/* //Only shows for Athletes */}
-          {athlete && (
+          {/* {athlete && (
             <PhoneLinks
               href={`/LumiFundraising/athletes/${athlete?.fundraiserId}/${athlete?.userId}`}
               hidden={!userFound || isCoach}
             >
               Athletes
             </PhoneLinks>
-          )}
+          )} */}
           <PhoneLinks href="/ContactUs">Contact Us</PhoneLinks>
         </>
       )}
@@ -118,9 +118,9 @@ function LumiFundraisingLinks(props: any) {
   );
 }
 
-export default LumiFundraisingLinks;
+export default WineryLinks;
 
-LumiFundraisingLinks.propTypes = {
+WineryLinks.propTypes = {
   showAnimated: PropTypes.bool.isRequired,
   largeScreen: PropTypes.bool.isRequired
 };

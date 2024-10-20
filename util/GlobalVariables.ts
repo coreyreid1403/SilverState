@@ -3,11 +3,11 @@ import { BaseUser } from "../models/BaseUser";
 import UserService from "../services/UserService ";
 import Constants from "./Constants";
 
-export default class FundraiserGlobalVariables {
+export default class GlobalVariables {
   cookieManager = new CookieManager();
   userService = new UserService()
 
-  static instance?: FundraiserGlobalVariables = undefined;
+  static instance?: GlobalVariables = undefined;
 
   private user?: BaseUser;
   public testMode: boolean = Constants.testMode;
@@ -17,8 +17,8 @@ export default class FundraiserGlobalVariables {
    * @returns globals class
    */
   static getInstance() {
-    if (!FundraiserGlobalVariables.instance) {
-      FundraiserGlobalVariables.instance = new FundraiserGlobalVariables();
+    if (!GlobalVariables.instance) {
+      GlobalVariables.instance = new GlobalVariables();
     }
     return this.instance;
   }
@@ -28,7 +28,7 @@ export default class FundraiserGlobalVariables {
    * @param user Current user
    * @param update If there was an update that need to be pushed to database
    */
-  async setCoach(
+  async setUser(
     user: BaseUser | undefined,
     update: boolean = true
   ): Promise<string> {
@@ -53,7 +53,7 @@ export default class FundraiserGlobalVariables {
     return 'User undefined';
   }
 
-  async getCoach(): Promise<BaseUser | undefined> {
+  async getUser(): Promise<BaseUser | undefined> {
     if (!this.user) {
       if (this.cookieManager.hasCookie(Constants.fundCoachCookie)) {
         let userEmail = this.cookieManager
@@ -86,11 +86,6 @@ export default class FundraiserGlobalVariables {
       return true;
     }
     return undefined;
-  }
-
-  private splitAthleteCookieInfo(athleteInfo: string): [any, any] {
-    let split = athleteInfo.split(',');
-    return [split[0], split[1]];
   }
 
   toggleTestMode() {

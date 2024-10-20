@@ -1,15 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { MDBContainer, MDBNavbar, MDBNavbarToggler } from 'mdb-react-ui-kit';
+import { MDBNavbar, MDBNavbarToggler } from 'mdb-react-ui-kit';
 import { Router, useRouter } from 'next/router';
 import HomeLinks from './HomeLinks';
-import LumiFundraisingLinks from './LumiFundraisingLinks';
-import LumiMealsLinks from './LumiMealsLinks';
+import WineryLinks from './LumiFundraisingLinks';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/OtherImages/Logo/logo2.gif';
 import styled from 'styled-components';
 import { InheritingLink } from '../../styles/SharedStyles';
-import FundraiserVariables from '../../util/LumiFundraising/FundraiserGlobalVariables';
+import GlobalVariables from '../../util/GlobalVariables';
 
 const FloatRight = styled.div`
   float: right;
@@ -41,7 +40,7 @@ const LinksDiv = styled.div`
 `;
 
 function Hamburger(props: any) {
-  let globals = FundraiserVariables.getInstance();
+  let globals = GlobalVariables.getInstance();
   const [showAnimated, setShowAnimated] = useState(false);
   const [largeScreen, setLargeScreen] = useState(true);
   const [user, setUser] = useState('');
@@ -72,17 +71,10 @@ function Hamburger(props: any) {
   const getUser = async () => {
     const user = await globals?.checkUser();
     if (user) {
-      const coach = await globals?.getCoach();
+      const coach = await globals?.getUser();
       if(coach){
         setUser(coach.userName);
         setUserLevel('Coach');
-      }
-    }
-    else if (user === false) {
-      const athlete = await globals?.getAthlete();
-      if(athlete){
-        setUser(athlete.userName);
-        setUserLevel('Athlete');
       }
     }
   };
@@ -101,14 +93,10 @@ function Hamburger(props: any) {
       product?.includes('LumiFundraising')
     ) {
       return (
-        <LumiFundraisingLinks
+        <WineryLinks
           showAnimated={showAnimated}
           largeScreen={largeScreen}
         />
-      );
-    } else if (path.includes('LumiMeals') || product?.includes('LumiMeals')) {
-      return (
-        <LumiMealsLinks showAnimated={showAnimated} largeScreen={largeScreen} />
       );
     }
     return <HomeLinks showAnimated={showAnimated} largeScreen={largeScreen} />;
