@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import tealImg from '../public/assets/backgroundTeal.png';
 import purpleImg from '../public/assets/backgroundPurple.png';
 import purpleImgInvert from '../public/assets/backgroundPurpleInvert2.png';
+import background from '../public/assets/images/photos/vineArchWhite.jpg';
 
 const StyledBackground = styled.div`
-  background-color: var(--color-grey);
+  background-image: url(${background.src});
   position: relative;
 `;
 

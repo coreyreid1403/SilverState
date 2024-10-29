@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 }
 
 const MainContainer = styled.div`
-  color: white;
-  background-color: var(--color-darkgrey);
+  color: black;
+  background-color: var(--color-offWhite);
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
