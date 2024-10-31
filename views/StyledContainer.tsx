@@ -4,11 +4,22 @@ import PropTypes from 'prop-types';
 import tealImg from '../public/assets/backgroundTeal.png';
 import purpleImg from '../public/assets/backgroundPurple.png';
 import purpleImgInvert from '../public/assets/backgroundPurpleInvert2.png';
-import background from '../public/assets/images/photos/vineArchWhite.jpg';
+import background from '../public/assets/images/photos/vineScean.jpg';
+import backgroundLarge from '../public/assets/images/photos/vineSceanFade.jpg';
 
 const StyledBackground = styled.div`
   background-image: url(${background.src});
-  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  // @media (max-width: 500px) {
+  //   background-image: none;
+  // }
+
+  @media (min-width: 1900px) {
+     background-image: url(${backgroundLarge.src});
+  }
 `;
 
 const StyledMain = styled.main`
@@ -88,8 +99,8 @@ const RightImage = styled.div`
 function StyledContainer(props: any) {
   return (
     <StyledBackground>
-      <LeftImage />
-      <RightImage />
+      {/* <LeftImage /> */}
+      {/* <RightImage /> */}
       {props.center ? (
         <CenterStyledMain>{props.children}</CenterStyledMain>
       ) : (
