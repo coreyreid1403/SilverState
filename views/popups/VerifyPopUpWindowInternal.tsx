@@ -16,17 +16,17 @@ import Skeleton from '../Skeleton';
 
 const StyledMDBModalContent = styled(MDBModalContent)`
   background: var(--color-grey);
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
   color: white;
 `;
 
 const StyledMDBModalHeader = styled(MDBModalHeader)`
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
   color: white;
 `;
 
 const StyledMDBModalFooter = styled(MDBModalFooter)`
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
   color: white;
 `;
 

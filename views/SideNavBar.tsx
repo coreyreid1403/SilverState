@@ -13,7 +13,7 @@ function SideNavBar(props: any) {
   const [showAnimated, setShowAnimated] = useState(false);
 
   return (
-    <Sidebar collapsed={!showAnimated} backgroundColor={"var(--color-darkgrey)"}>
+    <Sidebar collapsed={!showAnimated} backgroundColor={"var(--color-offWhite)"}>
       {/* <Menu>
       <MDBNavbar dark bgColor="dark">
       <MDBContainer>

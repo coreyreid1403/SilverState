@@ -16,11 +16,11 @@ import Skeleton from '../Skeleton';
 
 const StyledMDBModalContent = styled(MDBModalContent)`
   background: var(--color-grey);
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
 `;
 
 const StyledMDBModalHeader = styled(MDBModalHeader)`
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
 `;
 
 /**

@@ -52,7 +52,7 @@ a {
 }
 
 .animated-icon1 span {
-  background: var(--color-teal);
+  background: var(--color-blue);
 }
 
 .animated-icon1 span:nth-child(1) {

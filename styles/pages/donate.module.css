@@ -13,7 +13,7 @@
     grid-template-areas:
         'logo quote quote';
     gap: 10px;
-    background-color: var(--color-darkgrey);
+    background-color: var(--color-offWhite);
     padding: 10px;
     min-width: 50px;
     border-style: outset;

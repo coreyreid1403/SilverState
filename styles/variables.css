@@ -3,10 +3,7 @@
     --breakpoint-medium: '768px';
     --breakpoint-small: '576px';
 
-    --color-grey: #3c3a3c;
-    --color-darkgrey: #212529;
-    --color-purple: #cc31cf;
-    --color-teal: #1be6ff;
-
-    --color-offWhite: ##e8ecf2;
+    --color-grey: #959595;
+    --color-offWhite: #e8ecf2;
+    --color-blue: #070476;
 }

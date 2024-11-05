@@ -32,7 +32,7 @@ const HamburgerContainer = styled.div`
 `;
 
 const StyledMDBNavbarToggler = styled(MDBNavbarToggler)`
-  // border-color: var(--color-purple);
+  // border-color: var(--color-blue);
 `;
 
 const LinksDiv = styled.div`

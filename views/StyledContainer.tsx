@@ -5,7 +5,7 @@ import tealImg from '../public/assets/backgroundTeal.png';
 import purpleImg from '../public/assets/backgroundPurple.png';
 import purpleImgInvert from '../public/assets/backgroundPurpleInvert2.png';
 import background from '../public/assets/images/photos/vineScean.jpg';
-import backgroundLarge from '../public/assets/images/photos/vineSceanFade.jpg';
+import backgroundLarge from '../public/assets/images/photos/vineSceanFade15.jpg';
 
 const StyledBackground = styled.div`
   background-image: url(${background.src});
@@ -17,7 +17,7 @@ const StyledBackground = styled.div`
   //   background-image: none;
   // }
 
-  @media (min-width: 1900px) {
+  @media (min-width: 1925px) {
      background-image: url(${backgroundLarge.src});
   }
 `;

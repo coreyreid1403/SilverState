@@ -32,10 +32,10 @@ const StyledButton = styled.button`
   padding: 0;
   margin-left: 10px;
 
-  background: var(--color-darkgrey);
+  background: var(--color-offWhite);
   /*same as background*/
   color: #ffffff;
-  border: 2px solid var(--color-darkgrey);
+  border: 2px solid var(--color-offWhite);
 
   border-radius: 9999px;
   box-shadow: -5px -5px 10px #0d0f10,

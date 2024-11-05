@@ -9,7 +9,7 @@ export const PhoneLinks = styled(Link)`
   color: white;
 
   &:hover {
-    color: var(--color-teal);
+    color: var(--color-blue);
   }
   &:active {
     color: var(--color-grey);
@@ -24,7 +24,7 @@ export const TopBar = styled.div`
 `;
 
 export const StyledTable = styled.table`
-  background-color: var(--color-darkgrey);
+  background-color: var(--color-offWhite);
   margin-left: auto;
   margin-right: auto;
 `;
@@ -99,10 +99,10 @@ export const SmallSpace = styled.div`
 `;
 
 export const Card = styled.div`
-  background: var(--color-darkgrey);
+  background: var(--color-offWhite);
   border-radius: 25px;
   border-style: solid;
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
   box-shadow: 80px 80px 107px -2px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -115,10 +115,10 @@ export const Card = styled.div`
 `;
 
 export const HalfCard = styled.div`
-  background: var(--color-darkgrey);
+  background: var(--color-offWhite);
   border-radius: 25px;
   border-style: solid;
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
   box-shadow: 80px 80px 107px -2px rgba(0, 0, 0, 0.05);
   display: inline;
   height: 100%;

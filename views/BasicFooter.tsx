@@ -11,7 +11,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
 color:white;
-background-color: var(--color-darkgrey);
+background-color: var(--color-offWhite);
 `;
 
 function BasicFooter(props: any){
