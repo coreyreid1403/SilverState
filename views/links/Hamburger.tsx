@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { MDBNavbar, MDBNavbarToggler } from 'mdb-react-ui-kit';
 import { Router, useRouter } from 'next/router';
 import HomeLinks from './HomeLinks';
-import WineryLinks from './LumiFundraisingLinks';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/OtherImages/Logo/logo2.gif';
@@ -79,29 +78,6 @@ function Hamburger(props: any) {
     }
   };
 
-  /**
-   * Chooses what links to show
-   * @returns Current Links
-   */
-  function DisplayLinks() {
-    const router = useRouter();
-    let path = router.pathname;
-    const data = router.query;
-    const product = data.product;
-    if (
-      path.includes('LumiFundraising') ||
-      product?.includes('LumiFundraising')
-    ) {
-      return (
-        <WineryLinks
-          showAnimated={showAnimated}
-          largeScreen={largeScreen}
-        />
-      );
-    }
-    return <HomeLinks showAnimated={showAnimated} largeScreen={largeScreen} />;
-  }
-
   return (
     <>
       <section className="mb-3">
@@ -143,8 +119,9 @@ function Hamburger(props: any) {
           </FloatRight>
         </StyledMDBNavbar>
 
-        {/* //Decides what links to show */}
-        <LinksDiv>{DisplayLinks()}</LinksDiv>
+        <LinksDiv>
+          <HomeLinks showAnimated={showAnimated} largeScreen={largeScreen} />
+        </LinksDiv>
       </section>
     </>
   );

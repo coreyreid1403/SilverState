@@ -6,6 +6,7 @@ import {
   Card,
   CardContent,
   CardHeader,
+  Center,
   GridStyle,
   HalfCard,
   MediumSpacing,
@@ -18,14 +19,11 @@ const Home: NextPage = () => {
       <Title>Welcome to Silver State Vineyard and Winery</Title>
       <MediumSpacing />
       <Card>
+        <Center>
         <CardContent>
-          Welcome to Luminescence Software! We are a software company dedicated
-          high quality applications to make our lives easier. This company was
-          started to make simple applications to make daily life easier, and has
-          grown to much more. We currently provide a fundraising platform, and
-          are working on our main product which is a meal planner and organizer.
-          Please select your desired product above to get started.
+          A Northern Nevada local Winery
         </CardContent>
+        </Center>
       </Card>
     </StyledContainer>
   );

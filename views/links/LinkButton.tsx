@@ -34,18 +34,18 @@ const StyledButton = styled.button`
 
   background: var(--color-offWhite);
   /*same as background*/
-  color: #ffffff;
+  color: black;
   border: 2px solid var(--color-offWhite);
 
   border-radius: 9999px;
-  box-shadow: -5px -5px 10px #0d0f10,
-      5px 5px 10px #353b42;
+  // box-shadow: -5px -5px 10px #c5c9ce,
+  //     5px 5px 10px #ffffff;
 
   &:hover {
-    box-shadow: -1px -1px 5px #0d0f10,
-        1px 1px 5px #353b42,
-        inset -2px -2px 5px #0d0f10,
-        inset 2px 2px 4px #353b42;
+    box-shadow: -1px -1px 5px #c5c9ce,
+        1px 1px 5px #ffffff,
+        inset -2px -2px 5px #c5c9ce,
+        inset 2px 2px 4px #ffffff;
   }
 `;
 

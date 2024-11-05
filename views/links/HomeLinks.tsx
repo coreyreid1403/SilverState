@@ -11,21 +11,26 @@ function HomeLinks(props: any) {
     <MDBCollapse open={props.showAnimated}>
       {props.largeScreen ? (
         <>
-          <LinkButton url="/LumiFundraising">Fundraising</LinkButton>
+          <LinkButton url="/">Home</LinkButton>
+          <LinkButton url="/Wines">Wines</LinkButton>
+          <LinkButton url="/Products">Products</LinkButton>
+          <LinkButton url="/Events">Events</LinkButton>
           <LinkButton url="/ContactUs">Contact Us</LinkButton>
-          {/* <Link href="/LumiMeals">
-          <button className={styles.neuBtn}>LumiMeals</button>
-        </Link> */}
+          <LinkButton url="/History">History</LinkButton>
         </>
-      ) : ( //TODO: Move logic to inside link button???
+      ) : (
         <>
-          <PhoneLinks href="/LumiFundraising">Fundraising</PhoneLinks>
+          <PhoneLinks href="/">Home</PhoneLinks>
+          <StyledHr />
+          <PhoneLinks href="/Wines">Wines</PhoneLinks>
+          <StyledHr />
+          <PhoneLinks href="/Products">Products</PhoneLinks>
+          <StyledHr />
+          <PhoneLinks href="/Events">Events</PhoneLinks>
           <StyledHr />
           <PhoneLinks href="/ContactUs">Contact Us</PhoneLinks>
-          {/* <PhoneLinks href="/LumiMeals">
-      LumiMeals
-    </PhoneLinks> 
-   */}
+          <StyledHr />
+          <PhoneLinks href="/History">History</PhoneLinks>
         </>
       )}
     </MDBCollapse>

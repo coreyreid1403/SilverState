@@ -1,17 +1,22 @@
 import type { NextPage } from 'next';
 import { MediumSpacing, CardContent, HalfCard, Title, Card, Center } from '../styles/SharedStyles';
 import StyledContainer from '../views/StyledContainer';
+import { CardHeader } from 'react-bootstrap';
 
 const ContactUs: NextPage = () => {
   return (
     <StyledContainer center={true}>
-      <Title>Contact us</Title>
+      <Title>Events</Title>
       <MediumSpacing/>
       <Card>
         <Center>
+          <CardHeader>
+            2025
+          </CardHeader>
             <CardContent>
-                Mike and Christine Lenox: (775) 741-4707 <br />
-                Email: <a href='mailto:SilverStateVandW@gmail.com'>SilverStateVandW@gmail.com</a>
+                June
+                <hr/>
+                No Events
             </CardContent>
         </Center>
       </Card>
