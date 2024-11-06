@@ -3,10 +3,11 @@ import { MediumSpacing, CardContent, HalfCard, Title, Card, Center } from '../st
 import StyledContainer from '../views/StyledContainer';
 import { CardHeader } from 'react-bootstrap';
 
-const ContactUs: NextPage = () => {
+const Events: NextPage = () => {
   return (
     <StyledContainer center={true}>
       <Title>Events</Title>
+      
       <MediumSpacing/>
       <Card>
         <Center>
@@ -24,4 +25,4 @@ const ContactUs: NextPage = () => {
   );
 };
 
-export default ContactUs;
+export default Events;

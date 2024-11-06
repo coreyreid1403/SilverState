@@ -5,9 +5,9 @@ function Header(props: any) {
   return (
     // eslint-disable-next-line @next/next/no-script-component-in-head
     <Head>
-      <title>Luminescence Software</title>
-      <meta name="description" content="Luminescence Software, a software company giving back to the community" />
-      <meta name="keywords" content="luminescencesoftware, LuminescenceSoftware, Luminescence, Software, Luminescence Software, Fundraiser, School Fundraiser, sports fundraiser, fundraiser management" />
+      <title>Silver State</title>
+      <meta name="description" content="Silver State Winery and Vineyard" />
+      <meta name="keywords" content="Wine, Reno winery, winery, vineyard, Reno vineyard, silver spring winery" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
   );

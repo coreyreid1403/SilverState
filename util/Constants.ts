@@ -1,7 +1,16 @@
+import { Wine } from "../models/Wine";
+import { WineColor } from "../models/WineColor";
+import { WineYear } from "../models/WineYear";
+
 export default class Constants {
-  static readonly WineType = [
-    "Red",
-    "White"
+  static readonly Wines = [
+    new Wine('Rosé', WineColor.White, [new WineYear(2024, 10, 15)]),
+    new Wine('Chardonnay', WineColor.White, [new WineYear(2024, 10, 15)]),
+    new Wine('Pinot Noir', WineColor.Red, [new WineYear(2024, 10, 20)]),
+    new Wine('Merlot', WineColor.Red, [new WineYear(2024, 10, 20)]),
+    new Wine('Red Blend', WineColor.Red, [new WineYear(2024, 10, 20)]),
+    new Wine('Cooking Wine', WineColor.White, [new WineYear(2024, 0, 5)]),
+    new Wine('Grape Juice', WineColor.White, [new WineYear(2024, 0, 5)]),
   ];
 
   static readonly ProductMap = new Map<string, string>([
