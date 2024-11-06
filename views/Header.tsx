@@ -8,7 +8,7 @@ function Header(props: any) {
       <title>Silver State</title>
       <meta name="description" content="Silver State Winery and Vineyard" />
       <meta name="keywords" content="Wine, Reno winery, winery, vineyard, Reno vineyard, silver spring winery" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/birdfavicon.ico" />
     </Head>
   );
 }
