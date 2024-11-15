@@ -10,7 +10,6 @@ import styled from 'styled-components';
 function HomeLinks(props: any) {
 
 const Left = styled.div`
-// float: left;
 `;
 const Right = styled.div`
 float: right;

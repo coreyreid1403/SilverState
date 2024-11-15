@@ -21,8 +21,8 @@ import styled from "styled-components";
 const StyledButton = styled.button`
   border: none;
   cursor: pointer;
-  width: 110px;
   height: 30px;
+  width: 180px;
   display: inline-block;
   -webkit-translation: all;
   -webkit-translation-duration: 250ms;
@@ -47,6 +47,36 @@ const StyledButton = styled.button`
         inset -2px -2px 5px #c5c9ce,
         inset 2px 2px 4px #ffffff;
   }
+@media only screen and (max-width: 1750px) {
+  width: 170px;
+}
+@media only screen and (max-width: 1670px) {
+  width: 160px;
+}
+@media only screen and (max-width: 1580px) {
+  width: 150px;
+}
+@media only screen and (max-width: 1500px) {
+  width: 140px;
+}
+@media only screen and (max-width: 1425px) {
+  width: 130px;
+}
+@media only screen and (max-width: 1345px) {
+  width: 120px;
+}
+@media only screen and (max-width: 1265px) {
+  width: 110px;
+}
+@media only screen and (max-width: 1185px) {
+  width: 100px;
+}
+@media only screen and (max-width: 100px) {
+  width: 90px;
+}
+@media only screen and (max-width: 1100px) {
+  width: 85px;
+}
 `;
 
 /**

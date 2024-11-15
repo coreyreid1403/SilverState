@@ -21,14 +21,14 @@ const Logo = styled.div`
   margin: auto;
   width: 200px;
   transform: translate(0, -19%);
-  @media (max-width: 767px) {
+  @media (max-width: 980px) {
      display: none;
   }
 `;
 
 const MiniLogo = styled.div`
   display: none;
-  @media (max-width: 767px) {
+  @media (max-width: 980px) {
     display: block;
     z-index: 2;
     position:absolute;
@@ -80,7 +80,7 @@ function Hamburger(props: any) {
   const [userLevel, setUserLevel] = useState('');
 
   const updateTarget = useCallback((e: any) => {
-    if (window.innerWidth > 765) {
+    if (window.innerWidth > 980) {
       setLargeScreen(true);
     } else {
       setLargeScreen(false);
