@@ -9,25 +9,14 @@ import { WineYear } from '../models/WineYear';
 import Constants from '../util/Constants';
 
 const Products: NextPage = () => {
+  // const [wineName, setWineName] = useState<string>('Rosé');
   const [wine, setWine] = useState<Wine>(Constants.Wines[0]);
-  const [count, setCount] = useState(0);
+  const Wines2 = [1, 2, 3, 4, 5];
 
     function dropDownUpdate(change: any) {
-      console.log(change.target.value);
-      let foundWine: Wine | undefined = Constants.Wines.find(wine => wine.name = change.target.value)
-      if(foundWine){
-        console.log(foundWine)
-        handleClick()
-        setWine(foundWine);
-      }
+      // setWineName(change.target.value);
+      setWine(Constants.Wines.find(w => w.name === change.target.value) ?? Constants.Wines[0]);
   }
-  useEffect(() => {
-    console.log(wine?.name + ' updated');
-}, [wine]);
-
-const handleClick = () => {
-  setCount(prevCount => prevCount + 1);
-};
 
   return (
     <StyledContainer center={true}>
@@ -35,24 +24,15 @@ const handleClick = () => {
       <MediumSpacing/>
       <Card>
         <Center>
-          {/* <DropdownButton variant="secondary" title={wine?.name ?? 'Choose Wine'} onSelect={(change, event) => dropDownUpdate(change, event)}>
-          {Constants.Wines.map((wineDropdown: Wine) => {
-            if(wineDropdown?.years.find(year => year.count > 0)){
-              return <Dropdown.Item key={wineDropdown.name}>{wineDropdown.name}</Dropdown.Item>;
-            }
-          })}
-          </DropdownButton> */}
-          
-          <Form.Select aria-label="Default select example" onChange={(change) => dropDownUpdate(change)}>
+        <Form.Select aria-label="Default select example" onChange={(change) => dropDownUpdate(change)}>
           {Constants.Wines.map((wineDropdown: Wine) => {
             if(wineDropdown?.years.find(year => year.count > 0)){
               return <option value={wineDropdown.name}>{wineDropdown.name}</option>;
             }
           })}
-
         </Form.Select>
             <CardContent>
-              <p>{wine?.name + count}</p>
+              <p>{wine.name}</p>
             {/* <StyledTable>
           <MDBTableHead>
             <tr>
