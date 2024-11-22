@@ -22,34 +22,34 @@ padding-right: 10px
         <>
           <Left>
             <LinkButton url="/">Home</LinkButton>
-            <LinkButton url="/Wines">Wines</LinkButton>
             <LinkButton url="/Products">Products</LinkButton>
-            <LinkButton url="/Products">1</LinkButton>
+            <LinkButton url="/Events">Events</LinkButton>
+            <LinkButton url="/History">History</LinkButton>
           </Left>
           <Right>
-            <LinkButton url="/Products">2</LinkButton>
-            <LinkButton url="/Events">Events</LinkButton>
+            <LinkButton url="/Growers">Growers</LinkButton>
+            <LinkButton url="/Location">Location</LinkButton>
             <LinkButton url="/ContactUs">Contact Us</LinkButton>
-            <LinkButton url="/History">History</LinkButton>
+            <LinkButton url="/Cart">Cart</LinkButton>
           </Right>
         </>
       ) : (
         <>
           <PhoneLinks href="/">Home</PhoneLinks>
           <StyledHr />
-          <PhoneLinks href="/Wines">Wines</PhoneLinks>
-          <StyledHr />
           <PhoneLinks href="/Products">Products</PhoneLinks>
-          <StyledHr />
-          <PhoneLinks href="/Products">1</PhoneLinks>
-          <StyledHr />
-          <PhoneLinks href="/Products">2</PhoneLinks>
           <StyledHr />
           <PhoneLinks href="/Events">Events</PhoneLinks>
           <StyledHr />
+          <PhoneLinks href="/History">History</PhoneLinks>
+          <StyledHr />
+          <PhoneLinks href="/Growers">Growers</PhoneLinks>
+          <StyledHr />
+          <PhoneLinks href="/Location">Location</PhoneLinks>
+          <StyledHr />
           <PhoneLinks href="/ContactUs">Contact Us</PhoneLinks>
           <StyledHr />
-          <PhoneLinks href="/History">History</PhoneLinks>
+          <PhoneLinks href="/Cart">Cart</PhoneLinks>
         </>
       )}
     </MDBCollapse>
