@@ -1,84 +1,38 @@
 /**
- * The checkout cart for donation
+ * The checkout cart
  */
 export default class Cart {
   //#region properties
-  /**
-   * Name of donor
-   */
   name: string;
 
-  /**
-   * email
-   */
   email: string;
 
   /**
-   * Sport team donating to
+   * number of items, productId
    */
-  team: string;
+  items: Map<number, string>;
 
-  /**
-   * Sport team donating to ID
-   */
-  teamId: string;
 
-  /**
-   * IF they want to cover our fees
-   */
-  coverOverhead: boolean;
+  purchaseId: string;
 
-  /**
-   * Our fees
-   */
-  overhead: number;
-
-  /**
-   * Amount to donate
-   */
-  donation: number;
-
-  /**
-   * DonationId
-   */
-  donationId: string;
-
-  /**
-   * FundraiserId
-   */
-    fundraiserId: string;
   //#endregion
 
   /**
    *  Donation Cart
    * @param name
    * @param email
-   * @param team
-   * @param coverOverhead
-   * @param overhead
-   * @param donation
-   * @param donationId
-   * @param fundraiserId
+   * @param items
+   * @param purchaseId
    */
   constructor(
     name: string,
     email: string,
-    team: string,
-    teamId: string,
-    coverOverhead: boolean,
-    overhead: number,
-    donation: number,
-    donationId: string,
-    fundraiserId: string
+    items: Map<number, string>,
+    purchaseId: string
   ) {
     this.name = name;
     this.email = email;
-    this.team = team;
-    this.teamId = teamId;
-    this.coverOverhead = coverOverhead;
-    this.overhead = overhead;
-    this.donation = donation;
-    this.donationId = donationId;
-    this.fundraiserId = fundraiserId;
+    this.items = items;
+    this.purchaseId = purchaseId;
   }
 }

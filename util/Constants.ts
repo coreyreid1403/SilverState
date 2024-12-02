@@ -28,6 +28,11 @@ export default class Constants {
    */
   static readonly fundCoachCookie = "currentFundCoach";
 
+    /**
+   * The string name of the cart cookie
+   */
+    static readonly cartCookie = "cartCookie";
+
 
     /**
    * the base url

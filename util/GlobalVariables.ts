@@ -1,5 +1,6 @@
 import { CookieManager } from "../managers/CookieManager";
 import { BaseUser } from "../models/BaseUser";
+import Cart from "../models/Cart";
 import UserService from "../services/UserService ";
 import Constants from "./Constants";
 
@@ -10,6 +11,7 @@ export default class GlobalVariables {
   static instance?: GlobalVariables = undefined;
 
   private user?: BaseUser;
+  private cart?: Cart;
   public testMode: boolean = Constants.testMode;
 
   /**
@@ -87,6 +89,40 @@ export default class GlobalVariables {
     }
     return undefined;
   }
+
+    /**
+   * Sets the current cart
+   * @param user Current caRT
+   */
+    async setCart(
+      cart: Cart | undefined
+    ): Promise<string> {
+      if (cart) {
+        this.cart = cart;
+        //Set Cookie
+        this.cookieManager.setCookie(
+          Constants.cartCookie,
+          JSON.stringify(this.cart)
+        );
+        return '';
+      }
+      return 'Cart undefined';
+    }
+  
+    async getCart(): Promise<Cart | undefined> {
+      if (!this.cart) {
+        if (this.cookieManager.hasCookie(Constants.cartCookie)) {
+          let cartString = this.cookieManager
+            .getCookie(Constants.cartCookie)
+            ?.toString();
+          if(cartString){
+            let cart: Cart = JSON.parse(cartString);
+            this.cart = cart;
+          }
+        }
+      }
+      return this.cart;
+    }
 
   toggleTestMode() {
     this.testMode = !this.testMode;
