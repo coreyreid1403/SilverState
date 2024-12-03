@@ -11,7 +11,7 @@ export default class GlobalVariables {
   static instance?: GlobalVariables = undefined;
 
   private user?: BaseUser;
-  private cart?: Cart;
+  private cart: Cart = new Cart('', '', new Map(), '');
   public testMode: boolean = Constants.testMode;
 
   /**
@@ -92,7 +92,7 @@ export default class GlobalVariables {
 
     /**
    * Sets the current cart
-   * @param user Current caRT
+   * @param user Current cart
    */
     async setCart(
       cart: Cart | undefined
@@ -109,7 +109,7 @@ export default class GlobalVariables {
       return 'Cart undefined';
     }
   
-    async getCart(): Promise<Cart | undefined> {
+    getCart(): Cart{
       if (!this.cart) {
         if (this.cookieManager.hasCookie(Constants.cartCookie)) {
           let cartString = this.cookieManager

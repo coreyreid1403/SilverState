@@ -6,7 +6,6 @@ export default class Cart {
   name: string;
 
   email: string;
-
   /**
    * number of items, productId
    */

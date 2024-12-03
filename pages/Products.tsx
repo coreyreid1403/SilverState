@@ -7,8 +7,10 @@ import { useEffect, useState } from 'react';
 import { Wine } from '../models/Wine';
 import { WineYear } from '../models/WineYear';
 import Constants from '../util/Constants';
+import GlobalVariables from '../util/GlobalVariables';
 
 const Products: NextPage = () => {
+  let globals = GlobalVariables.getInstance();
   // const [wineName, setWineName] = useState<string>('Rosé');
   const [wine, setWine] = useState<Wine>(Constants.Wines[0]);
   const Wines2 = [1, 2, 3, 4, 5];
