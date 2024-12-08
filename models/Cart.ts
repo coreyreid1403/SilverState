@@ -1,3 +1,5 @@
+import WinePurchaseInfo from "./WinePurchaseInfo";
+
 /**
  * The checkout cart
  */
@@ -9,7 +11,7 @@ export default class Cart {
   /**
    * number of items, productId
    */
-  items: Map<number, string>;
+  items: WinePurchaseInfo[];
 
 
   purchaseId: string;
@@ -26,7 +28,7 @@ export default class Cart {
   constructor(
     name: string,
     email: string,
-    items: Map<number, string>,
+    items: WinePurchaseInfo[],
     purchaseId: string
   ) {
     this.name = name;
