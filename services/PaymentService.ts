@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 import Constants from "../util/Constants";
 import Cart from "../models/Cart";
+import WinePurchaseInfo from "../models/WinePurchaseInfo";
 
 export default class PaymentService {
   router = useRouter();
@@ -26,5 +27,13 @@ export default class PaymentService {
       console.log(posts);
     }
     return [posts.error];
+  }
+
+  public calculateTotal(wines: WinePurchaseInfo[]) {
+    let total = 0;
+    wines.forEach((wine) => {
+      total = total + (wine.amount * wine.year.cost)
+    });
+    return total;
   }
 }

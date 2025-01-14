@@ -11,7 +11,7 @@ export default class GlobalVariables {
   static instance?: GlobalVariables = undefined;
 
   private user?: BaseUser;
-  private cart: Cart = new Cart('', '', new Map(), '');
+  private cart: Cart = new Cart('', '', [], '');
   public testMode: boolean = Constants.testMode;
 
   /**
