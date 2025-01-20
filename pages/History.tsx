@@ -17,15 +17,15 @@ const History: NextPage = () => {
           up in Oxnard California and was the son of a long line of farmers from 1903 starting with E.E. Lenox.
           John worked on his family farm as a boy, growing things such as lima beans and lemons. John went to
           Organ State University to study agriculture. He met his future wife Sina, while at college. They
-          married,(year) John graduated (date) and started serving in the US Army as a pilot in Vietnam ( dates).
+          married, then John graduated and started serving in the US Army as a pilot in Vietnam.
           John and Sina had 4 children, Debbie, John, Mike and Ginger. After returning from the war John and Sina
           brought the family home to Oxnard California to start farming and raise there family. John and Sina grew
-          lima beans, and tomatoes.( dates)They purchased 1000 acers in Austin Nevada ( ) to eventually live and
-          work the land. In (1979) John and Sina moved their family to Nevada full time to grow grain and alfalfa
-          on a 1000 acer farm. They grew alfalfa, grain, and raised cattle. In (date) John and Sina retired to Silver
+          lima beans, and tomatoes. They purchased 1000 acres in Austin Nevada to eventually live and
+          work the land. In 1979 John and Sina moved their family to Nevada full time to grow grain and alfalfa
+          on a 1000 acer farm. They grew alfalfa, grain, and raised cattle. John and Sina retired to Silver
           Springs, in order to travel more. In 2008 John and Sina tried the experiment of starting a Vineyard. You
           can take the farmer off the farm but cannot take the farming out of the farmer. In 2008 John, Sina and
-          their son Mike started the task of creating the Vineyard. They planted 250 vines Merlot, Charney,
+          their son Mike started the task of creating the Vineyard. They planted 250 vines Merlot, Chardonnay,
           Riesling, Pinot Grigio, Pinot Noir, to start. John, Sina and Mike worked and continued to grow the
           vineyard, to 1200 vines. They named the vineyard 9 th Street .
           <b/>
