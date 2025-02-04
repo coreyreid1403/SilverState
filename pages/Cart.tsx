@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { MediumSpacing, CardContent, HalfCard, Title, Card, Center, StyledTable } from '../styles/SharedStyles';
+import { MediumSpacing, CardContent, HalfCard, OuterGlowTitle, Card, Center, StyledTable } from '../styles/SharedStyles';
 import StyledContainer from '../views/StyledContainer';
 import { Button, CardFooter, CardHeader } from 'react-bootstrap';
 import GlobalVariables from '../util/GlobalVariables';
@@ -23,7 +23,7 @@ const CartPage: NextPage = () => {
 
   return (
     <StyledContainer center={true}>
-      <Title>Cart</Title>
+      <OuterGlowTitle>Cart</OuterGlowTitle>
 
       <MediumSpacing />
       <Card>

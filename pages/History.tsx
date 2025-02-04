@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { MediumSpacing, CardContent, HalfCard, Title, Card, Center, Spacing } from '../styles/SharedStyles';
+import { MediumSpacing, CardContent, HalfCard, OuterGlowTitle, Card, Center, Spacing } from '../styles/SharedStyles';
 import StyledContainer from '../views/StyledContainer';
 import { CardHeader } from 'react-bootstrap';
 
@@ -7,7 +7,7 @@ const History: NextPage = () => {
   return (
     <StyledContainer center={true}>
       <Spacing></Spacing>
-      <Title>History</Title>
+      <OuterGlowTitle>History</OuterGlowTitle>
 
       <MediumSpacing />
       <Card>

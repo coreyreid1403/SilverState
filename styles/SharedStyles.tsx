@@ -23,6 +23,16 @@ export const TopBar = styled.div`
   width: 80%;
 `;
 
+export const OuterGlowTitle = styled.p`
+  text-align: center;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 0 0 45px white;
+`;
+
+
 export const StyledTable = styled.table`
   background-color: var(--color-offWhite);
   margin-left: auto;

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { MediumSpacing, CardContent, Title, Card, Center, StyledTable, HalfCard, FormButton } from '../styles/SharedStyles';
+import { MediumSpacing, CardContent, OuterGlowTitle, Card, Center, StyledTable, HalfCard, FormButton } from '../styles/SharedStyles';
 import StyledContainer from '../views/StyledContainer';
 import { Button, CardFooter, CardHeader, Dropdown, DropdownButton, Form } from 'react-bootstrap';
 import { MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
@@ -42,7 +42,7 @@ const Products: NextPage = () => {
 
   return (
     <StyledContainer center={true}>
-      <Title>Products</Title>
+      <OuterGlowTitle>Products</OuterGlowTitle>
       <MediumSpacing />
       <Card>
         <form

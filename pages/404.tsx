@@ -2,7 +2,7 @@
 import type { NextPage } from 'next';
 import { useCallback, useEffect, useState } from 'react';
 import StyledContainer from '../views/StyledContainer';
-import { Description, Title } from '../styles/SharedStyles';
+import { Description, OuterGlowTitle } from '../styles/SharedStyles';
 
 const NotFound: NextPage = () => {
   const [width, setWidth] = useState(0);
@@ -28,7 +28,7 @@ const NotFound: NextPage = () => {
   const isBreakpoint = useMediaQuery(768);
   return (
     <StyledContainer center={true}>
-        <Title>404</Title>
+        <OuterGlowTitle>404</OuterGlowTitle>
         <Description>Oh no! not a 404!</Description>
     </StyledContainer>
   );

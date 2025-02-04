@@ -10,13 +10,13 @@ import {
   GridStyle,
   HalfCard,
   MediumSpacing,
-  Title
+  OuterGlowTitle
 } from '../styles/SharedStyles';
 
 const Home: NextPage = () => {
   return (
     <StyledContainer center={true}>
-      <Title>Welcome to Silver State Vineyard and Winery</Title>
+      <OuterGlowTitle>Welcome to Silver State Vineyard and Winery</OuterGlowTitle>
       <MediumSpacing />
       <Card>
         <Center>
