@@ -13,7 +13,7 @@ export default async function handler(req: any, res: any) {
       const session = await stripe.checkout.sessions.create({
         line_items: line_items,
         mode: "payment",
-        success_url: `${Constants.baseURL}/payment/success?donationId=${cart.donationId}&fundraiserId=${cart.fundraiserId}`,
+        success_url: `${Constants.baseURL}/payment/success?purchaseId=${cart.purchaseId}`,
         cancel_url: `${Constants.baseURL}/payment/cancel`,
       });
       res.status(200).json({ session: session, error: "" });
@@ -38,14 +38,14 @@ function makeCart(cart: Cart) {
     //   price: "90",
     //   quantity: 1,
     // },
-    {
-      price_data: {
-        currency: "USD",
-        product: cart.teamId,
-        unit_amount: cart.donation * 100,
-      },
-      quantity: 1,
-    },
+    // {
+    //   price_data: {
+    //     currency: "USD",
+    //     product: cart.teamId,
+    //     unit_amount: cart.donation * 100,
+    //   },
+    //   quantity: 1,
+    // },
   ];
 
   return line_items;
