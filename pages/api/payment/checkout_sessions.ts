@@ -47,6 +47,5 @@ function makeCart(cart: Cart) {
     //   quantity: 1,
     // },
   ];
-
   return line_items;
 }
